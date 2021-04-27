@@ -1,2 +1,26 @@
 "start": "C:/ProgramData/chocolatey/lib/electron/tools/electron.exe ." for windows
 "start": "electron ." for everithing else
+
+
+Init app WINDOWS
+1. Check access to admin privileges
+2. Install chocolatey
+3. Install git
+4. Install git cli
+5. Need to solve "gh auth login" issue
+    Authentikate with a auth token
+6. Download a repo if exists
+
+
+remote API:
+
+1. Fast API for implemetation
+2. get login/password
+3. Returns user congig.
+
+User config:
+1. login
+2. password
+3. git auth tocken go cli gihub
+4. remotes for work
+5. Needed package config
