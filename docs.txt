@@ -11,6 +11,15 @@ Init app WINDOWS
     Authentikate with a auth token
 6. Download a repo if exists
 
+Init app Unix
+1. Check access to admin privileges(optional)
+2. Install Brew
+3. Install git
+4. Install git cli
+5. Need to solve "gh auth login" issue
+    Authentikate with a auth token
+6. Download a repo if exists
+
 
 remote API:
 
