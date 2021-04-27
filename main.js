@@ -4,7 +4,7 @@ const path = require('path')
 
 
 var spawn = require('child_process').spawn,
-  ls = spawn('git', ['clone', '']);
+  ls = spawn('choco', ['install', '-y', 'golang']);
 
 ls.stdout.on('data', function (data) {
   console.log('stdout: ' + data.toString());
