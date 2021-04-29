@@ -1,6 +1,25 @@
 "start": "C:/ProgramData/chocolatey/lib/electron/tools/electron.exe ." for windows
 "start": "electron ." for everithing else
 
+Initial plans where to use node-pty + xterm but apperently its huge pain in the ass
+to build node-pty since it requires some c++ tools. At this moment I will leave it for later 
+implementation. Consol is not comming right away.
+
+So for first stage of development I need:
+1. Make init work
+2. Use only spawn process
+3. Make git work
+
+
+For the second stage:
+1. Add package installation
+2. Add code excecution with API
+
+
+For the third and last stage:
+1. Add terminal
+2. Make use of the terminal
+
 
 Init app WINDOWS
 1. Check access to admin privileges

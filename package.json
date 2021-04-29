@@ -4,13 +4,17 @@
   "description": "The app to build a bridge between teacher and student",
   "main": "main.js",
   "scripts": {
-    "start": "C:/ProgramData/chocolatey/lib/electron/tools/electron.exe ."
+    "start": "C:/ProgramData/chocolatey/lib/electron/tools/electron.exe .",
+    "rebuild": "electron-rebuild -f -w yourmodule"
   },
   "keywords": [],
   "author": "SergeyKalutsky",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^12.0.5"
+    "electron": "^12.0.5",
+    "electron-rebuild": "^2.3.5",
+    "node-pty": "0.10.1",
+    "xterm": "4.9.0"
   },
   "build": {
     "win": {
