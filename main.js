@@ -1,6 +1,12 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
+var spawn =  require('child_process').spawn
 
+let x = spawn('git', ['status'], {
+  cwd: process.cwd(),
+  detached: true,
+  stdio: "inherit"
+});
 
 
 function createWindow() {
@@ -18,7 +24,6 @@ function createWindow() {
 
 app.whenReady().then(() => {
   createWindow()
-
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) {
       createWindow()

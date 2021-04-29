@@ -1,6 +1,16 @@
 "start": "C:/ProgramData/chocolatey/lib/electron/tools/electron.exe ." for windows
 "start": "electron ." for everithing else
 
+comprehensive rewiev of child_process:
+https://www.freecodecamp.org/news/node-js-child-processes-everything-you-need-to-know-e69498fe970a/
+
+the solution to my problem:
+https://stackoverflow.com/questions/59646384/node-js-vs-electron-run-external-command-and-show-the-stdout-on-interface
+
+for reference:
+https://stackoverflow.com/questions/14332721/node-js-spawn-child-process-and-get-terminal-output-live
+https://stackoverflow.com/questions/28946904/piping-data-from-child-to-parent-in-nodejs
+
 Initial plans where to use node-pty + xterm but apperently its huge pain in the ass
 to build node-pty since it requires some c++ tools. At this moment I will leave it for later 
 implementation. Consol is not comming right away.
