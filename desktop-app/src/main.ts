@@ -11,9 +11,8 @@ const processCmd = (win: BrowserWindow) => {
     });
 }
 
-
 ipcMain.on('asynchronous-message', (event, arg) => {
-  console.log("heyyyy",arg) // prints "heyyyy ping"
+  console.log("heyyyy", arg) 
 })
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -26,6 +25,10 @@ const createWindow = (): void => {
   const mainWindow = new BrowserWindow({
     height: 900,
     width: 900,
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false
+      }
   });
 
   // and load the index.html of the app.

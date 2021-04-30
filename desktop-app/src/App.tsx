@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.global.css';
+import { ipcRenderer } from 'electron'
+
 
 const Hello = () => {
   return (
@@ -8,7 +10,9 @@ const Hello = () => {
       </div>
       <h1>electron-react-boilerplate</h1>
       <div className="Hello">
-        <button type="button">
+        <button onClick={()=>{
+         ipcRenderer.send('asynchronous-message', 'ping')
+         }} type="button">
           <span>
             Run command
           </span>
