@@ -1,6 +1,9 @@
 "start": "C:/ProgramData/chocolatey/lib/electron/tools/electron.exe ." for windows
 "start": "electron ." for everithing else
 
+an amaising react write off:
+https://blog.logrocket.com/electron-forge-vs-electron-react-boilerplate/
+
 creating reac-forge project:
 Only some root issues
 yarn create electron-app my-new-app --template=typescript-webpack
