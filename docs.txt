@@ -1,6 +1,13 @@
 "start": "C:/ProgramData/chocolatey/lib/electron/tools/electron.exe ." for windows
 "start": "electron ." for everithing else
 
+creating reac-forge project:
+Only some root issues
+yarn create electron-app my-new-app --template=typescript-webpack
+yarn add react react-dom
+yarn add @types/react @types/react-dom --dev
+
+
 comprehensive rewiev of child_process:
 https://www.freecodecamp.org/news/node-js-child-processes-everything-you-need-to-know-e69498fe970a/
 
