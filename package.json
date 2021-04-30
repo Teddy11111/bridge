@@ -4,7 +4,7 @@
   "description": "The app to build a bridge between teacher and student",
   "main": "main.js",
   "scripts": {
-    "start": "C:/ProgramData/chocolatey/lib/electron/tools/electron.exe .",
+    "start": "electron .",
     "rebuild": "electron-rebuild -f -w yourmodule"
   },
   "keywords": [],
