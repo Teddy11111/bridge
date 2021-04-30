@@ -12,7 +12,13 @@ const processCmd = (win: BrowserWindow) => {
 }
 
 ipcMain.on('asynchronous-message', (event, arg) => {
-  console.log("heyyyy", arg) 
+  // console.log("heyyyy", arg) 
+    exec("git status", { timeout: 10000, maxBuffer: 20000 * 1024 },
+      function (error, stdout, stderr) {
+        const out = stdout.toString();
+        console.log("heyyyy", out) 
+      });
+  }
 })
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.

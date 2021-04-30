@@ -8,7 +8,7 @@ const Hello = () => {
     <div>
       <div className="Hello">
       </div>
-      <h1>electron-react-boilerplate</h1>
+      <h1>BRIDGE</h1>
       <div className="Hello">
         <button onClick={()=>{
          ipcRenderer.send('asynchronous-message', 'ping')
