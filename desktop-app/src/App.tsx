@@ -14,7 +14,7 @@ const Console = () => {
   return (
     <div>
       <p>{output}</p>
-      <button onClick={() => ipcRenderer.send('cmd', 'status')}>
+      <button onClick={() => ipcRenderer.send('cmd', ['git', 'status'])}>
         Press me
       </button>
     </div>
