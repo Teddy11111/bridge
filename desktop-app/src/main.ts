@@ -3,14 +3,6 @@ import { exec, spawn } from 'child_process';
 
 declare const MAIN_WINDOW_WEBPACK_ENTRY: any;
 
-const processCmd = (win: BrowserWindow) => {
-  exec("git status", { timeout: 10000, maxBuffer: 20000 * 1024 },
-    function (error, stdout, stderr) {
-      const out = stdout.toString();
-      win.webContents.send('ping', out)
-    });
-}
-
 ipcMain.on('cmd', (event, arg) => {
   const child = spawn('git', [arg])
   child.stdout.on('data', (chunk) => {
