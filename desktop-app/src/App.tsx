@@ -1,33 +1,28 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.global.css';
 import { ipcRenderer } from 'electron'
 
 
-ipcRenderer.on('asynchronous-reply', (event, arg) => {
-  console.log(arg)
-})
+const Console = () => {
+  // Объявление новой переменной состояния «count»
+  const [output, setCount] = useState('');
 
-const Hello = () => {
+  ipcRenderer.on('stdout', (event, arg) => {
+    setCount(output + '\n' + arg)
+  })
+
   return (
     <div>
-      <div className="Hello">
-      </div>
-      <h1>BRIDGE</h1>
-      <div className="Hello">
-        <button onClick={()=>{
-         ipcRenderer.send('asynchronous-message', 'ping')
-         }} type="button">
-          <span>
-            Run command
-          </span>
-          </button>
-      </div>
+      <p>{output}</p>
+      <button onClick={() => ipcRenderer.send('cmd', 'long.js')}>
+        Нажми на меня
+      </button>
     </div>
   );
-};
+}
 
 export default function App() {
   return (
-    <Hello />
+    <Console />
   );
 }

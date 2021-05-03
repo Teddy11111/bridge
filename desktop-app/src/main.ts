@@ -11,11 +11,11 @@ const processCmd = (win: BrowserWindow) => {
     });
 }
 
-ipcMain.on('asynchronous-message', (event, arg) => {
-  const child = spawn('node', ['long.js'])
+ipcMain.on('cmd', (event, arg) => {
+  const child = spawn('node', [arg])
   child.stdout.on('data', (chunk) => {
     const out = chunk.toString()
-    event.reply('asynchronous-reply', out)
+    event.reply('stdout', out)
   })
 })
 
