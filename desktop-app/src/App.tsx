@@ -3,6 +3,10 @@ import './App.global.css';
 import { ipcRenderer } from 'electron'
 
 
+ipcRenderer.on('asynchronous-reply', (event, arg) => {
+  console.log(arg)
+})
+
 const Hello = () => {
   return (
     <div>

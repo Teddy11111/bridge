@@ -15,10 +15,9 @@ ipcMain.on('asynchronous-message', (event, arg) => {
   const child = spawn('node', ['long.js'])
   child.stdout.on('data', (chunk) => {
     const out = chunk.toString()
-    console.log(out)
+    event.reply('asynchronous-reply', out)
   })
-}
-)
+})
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
