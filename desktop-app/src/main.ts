@@ -12,7 +12,7 @@ const processCmd = (win: BrowserWindow) => {
 }
 
 ipcMain.on('cmd', (event, arg) => {
-  const child = spawn('node', [arg])
+  const child = spawn('git', [arg])
   child.stdout.on('data', (chunk) => {
     const out = chunk.toString()
     event.reply('stdout', out)

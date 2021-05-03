@@ -14,8 +14,8 @@ const Console = () => {
   return (
     <div>
       <p>{output}</p>
-      <button onClick={() => ipcRenderer.send('cmd', 'long.js')}>
-        Нажми на меня
+      <button onClick={() => ipcRenderer.send('cmd', 'status')}>
+        Press me
       </button>
     </div>
   );
