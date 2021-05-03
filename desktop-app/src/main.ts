@@ -16,7 +16,8 @@ ipcMain.on('asynchronous-message', (event, arg) => {
   child.stdout.on('data', (chunk) => {
     const out = chunk.toString()
     console.log(out)
-  }
+  })
+}
 )
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -32,7 +33,7 @@ const createWindow = (): void => {
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false
-      }
+    }
   });
 
   // and load the index.html of the app.
