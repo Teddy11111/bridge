@@ -39,3 +39,15 @@ html, body, #root, .App {
   height: 100%;
   float: right;
 }
+
+.tab-text {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workspace-tab {
+  height: 5%;
+  background-color: #242321;
+}

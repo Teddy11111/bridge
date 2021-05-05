@@ -19,14 +19,15 @@ const DirTree = () => {
       <div className='left-side-bar'>
         <div className='tabs'>
           <div className='tree-tab'>
-            <span className='tab-text'>Explorer</span>
+            <span className='tab-text'>ПРОВОДНИК</span>
           </div>
           <div className='feed-tab'>
-            <span className='tab-text'>Feed</span>
+            <span className='tab-text'>ЛЕНТА</span>
           </div>
         </div>
       </div>
       <div className='workspace'>
+        <div className='workspace-tab'></div>
         <Console />
       </div>
     </>
