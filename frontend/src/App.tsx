@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css'
 
 const Console = () => {
@@ -14,18 +14,23 @@ const Console = () => {
 }
 
 const DirTree = () => {
-
   return (
     <>
-    <div className='left-side-bar'>
-    </div>
-    <div className='workspace'>
-    <Console />
-    </div>
+      <div className='left-side-bar'>
+        <div className='tabs'>
+          <div className='tree-tab'>
+            <span className='tab-text'>Explorer</span>
+          </div>
+          <div className='feed-tab'>
+            <span className='tab-text'>Feed</span>
+          </div>
+        </div>
+      </div>
+      <div className='workspace'>
+        <Console />
+      </div>
     </>
-    
   )
-
 }
 
 export default function App() {

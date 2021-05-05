@@ -21,3 +21,21 @@ html, body, #root, .App {
   float: right;
   background-color: #130d01
 }
+
+.tabs {
+  width: 100%;
+  height: 8%;
+  background-color: #f3ecdd
+}
+
+.tree-tab {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.feed-tab {
+  width: 50%;
+  height: 100%;
+  float: right;
+}
