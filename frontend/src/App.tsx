@@ -1,4 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import TreeView from '@material-ui/lab/TreeView';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import TreeItem from '@material-ui/lab/TreeItem';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import './App.css'
 
 const Console = () => {
@@ -7,9 +14,45 @@ const Console = () => {
 
   return (
     <div className='console'>
+      <KeyboardArrowDownIcon/>
       <p>
       </p>
     </div>
+  );
+}
+
+const useStyles = makeStyles({
+  root: {
+    height: 216,
+    flexGrow: 1,
+    maxWidth: 400,
+  },
+});
+
+const MultiSelectTreeView = () => {
+  const classes = useStyles();
+
+  return (
+    <TreeView
+      className={classes.root}
+      defaultCollapseIcon={<ExpandMoreIcon />}
+      defaultExpandIcon={<ChevronRightIcon />}
+      multiSelect
+    >
+      <TreeItem nodeId="1" label="Applications">
+        <TreeItem nodeId="2" label="Calendar" />
+        <TreeItem nodeId="3" label="Chrome" />
+        <TreeItem nodeId="4" label="Webstorm" />
+      </TreeItem>
+      <TreeItem nodeId="5" label="Documents">
+        <TreeItem nodeId="6" label="Material-UI">
+          <TreeItem nodeId="7" label="src">
+            <TreeItem nodeId="8" label="index.js" />
+            <TreeItem nodeId="9" label="tree-view.js" />
+          </TreeItem>
+        </TreeItem>
+      </TreeItem>
+    </TreeView>
   );
 }
 
@@ -25,9 +68,15 @@ const DirTree = () => {
             <span className='tab-text'>ЛЕНТА</span>
           </div>
         </div>
+        <div className='icon-left-side-bar'></div>
+        <div className='tree'> <MultiSelectTreeView></MultiSelectTreeView> </div>
       </div>
-      <div className='workspace'>
-        <div className='workspace-tab'></div>
+      <div className='right-side-bar'>
+        <div className='workspace'></div>
+        <div className='workspace-tab'>
+          <Button className='pull-bttn'>Pull</Button>
+          <Button className='push-bttn'>Push</Button>
+        </div>
         <Console />
       </div>
     </>

@@ -1,53 +1,88 @@
-html, body, #root, .App {
-  height: 100%;
+html,
+body,
+#root,
+.App {
+    height: 100%;
 }
+
+.icon-left-side-bar {
+    float: left;
+    height: 100%;
+    width: 20%;
+    background-color: #333231;
+}
+
+.tree {
+    display: flex;
+    justify-content: center;
+}
+
 .console {
-  width: 100%;
-  height: 30%;
-  position: absolute;
-  bottom: 0%; 
-  background-color: #ffffff
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
 }
 
 .left-side-bar {
-  width: 30%;
-  height: 100%;
-  float: left;
-  background-color: #242321
+    position: absolute;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    background-color: #242321
 }
+
+.right-side-bar {
+    position: absolute;
+    right: 0;
+    width: 70%;
+    height: 100%;
+}
+
 .workspace {
-  width: 70%;
-  height: 100%;
-  float: right;
-  background-color: #130d01
-}
-
-.tabs {
-  width: 100%;
-  height: 8%;
-  background-color: #f3ecdd
-}
-
-.tree-tab {
-  width: 50%;
-  height: 100%;
-  float: left;
-}
-
-.feed-tab {
-  width: 50%;
-  height: 100%;
-  float: right;
-}
-
-.tab-text {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #130d01;
 }
 
 .workspace-tab {
-  height: 5%;
-  background-color: #242321;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    width: 100%;
+    height: 5%;
+    background-color: #242321;
+}
+
+Button {
+    width: 90px;
+}
+
+.tabs {
+    width: 100%;
+    height: 8%;
+    background-color: #010818a9
+}
+
+.tree-tab {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.feed-tab {
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+
+.tab-text {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
