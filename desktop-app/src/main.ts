@@ -3,11 +3,11 @@ import { exec, spawn } from 'child_process';
 
 declare const MAIN_WINDOW_WEBPACK_ENTRY: any;
 
+
 ipcMain.on('cmd', (event, arg) => {
   const child = spawn('ls')
   child.stdout.on('data', (chunk) => {
     const out = chunk.toString()
-    console.log('out:', out)
     event.reply('stdout', out)
   })
 })
