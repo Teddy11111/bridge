@@ -11,7 +11,9 @@ function retCmd (platform:string, pckg:string){
     return [res, cmd, args]
 }
 
-const [res, cmd, args] = retCmd('linux', 'python')
-const child = spawnSync(cmd, args)
-const stdout = child.stdout.toString()
-console.log(stdout.includes(res))
+function checkExists(platform:string, pckg:string){
+    const [res, cmd, args] = retCmd('linux', 'python')
+    const child = spawnSync(cmd, args)
+    const stdout = child.stdout.toString()
+    return stdout.includes(res)
+}
